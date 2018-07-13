@@ -38,6 +38,7 @@ OBJ=obj
 APP=$(PACKAGE).AppDir
 EXE=$(PACKAGE)-$(ARCH).AppImage
 BIN=$(PACKAGE)-$(OS)-$(ARCH).AppImage
+SIG=$(BIN).sha256.sig
 
 default:
 	mkdir -p $(OBJ)
@@ -60,10 +61,10 @@ default:
 	mv 256.png $(APP)/$(PACKAGE).png
 	appimagetool $(APP)
 	mv $(EXE) $(BIN)
-	sha256sum $(BIN) > $(BIN).sig
+	sha256sum $(BIN) > $(SIG)
 
 clean:
 	rm -rf $(OBJ)
 	rm -rf $(APP)
 	rm -f $(BIN)
-	rm -f $(BIN).sig
+	rm -f $(SIG)
