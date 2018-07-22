@@ -38,7 +38,7 @@ OBJ=obj
 APP=$(PACKAGE).AppDir
 EXE=$(PACKAGE)-$(ARCH).AppImage
 BIN=$(PACKAGE)-$(OS)-$(ARCH).AppImage
-SIG=$(BIN).sha256.sig
+SIG=$(BIN).sha2
 
 default:
 	mkdir -p $(OBJ)
