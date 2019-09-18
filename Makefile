@@ -22,7 +22,7 @@
 #
 
 PACKAGE=casm
-VERSION=0.3.0
+VERSION=0.4.0
 ARCHIVE=tar.gz
 
 LOGO=https://github.com/casm-lang/casm-lang.logo/raw/master/obj/icon/256.png
